@@ -20,7 +20,7 @@ const DepartmentStaff = () => {
   
   console.log(data);
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600">
       <div className="bg-white shadow-md rounded-lg p-8 max-w-md w-full">
         <h2 className="text-2xl font-bold text-center mb-6">Department Staff</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -87,7 +87,7 @@ const DepartmentStaff = () => {
           <div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
+              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 shadow-lg transition"
             >
               Show data
             </button>
@@ -147,7 +147,7 @@ const DepartmentStaff = () => {
     <div className="mt-4">
       <button
         type="button"
-        className="w-full px-4 py-2 bg-blue-500 text-white rounded-md"
+        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 shadow-lg transition"
       >
         Update
       </button>

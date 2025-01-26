@@ -7,6 +7,7 @@ import Dashboard from '../pages/Dashboard';
 import { useSelector } from 'react-redux';
 import Receptionist from '../pages/Receptionist';
 import DepartmentStaff from '../pages/DepartmentStaff';
+import Admin from '../pages/Admin';
 
 const ProtectedRoute = ({ children }) => {
   const { token } = useSelector((state) => state.auth);
@@ -16,12 +17,14 @@ const ProtectedRoute = ({ children }) => {
 const AppRoutes = () => (
   <BrowserRouter>
     <Routes>
-      <Route path="/login" element={<Dashboard />} />
+      <Route path="/" element={<Dashboard />} />
       <Route path="/Receptionist" element={<Receptionist/>} />
       <Route path="/DepartmentStaff" element={<DepartmentStaff/>} />
 
-      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/admin" element={<Admin />} />
+
       {/* <Route
         path="/dashboard"
         element={

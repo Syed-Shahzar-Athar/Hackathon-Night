@@ -15,32 +15,33 @@ const Dashboard = () => {
       {/* Sidebar */}
       <aside className="w-64 bg-gray-800 text-white flex flex-col">
         <div className="p-4 border-b border-gray-700">
-          <h2 className="text-2xl font-bold">Dashboard</h2>
+        <img src="/images/images.png" alt="Description" />      
+            <h2 className="text-2xl font-bold">Dashboard</h2>
         </div>
         <nav className="flex-1 p-4">
           <ul className="space-y-2">
             <li>
               <Link
-                to="/dashboard"
+                to="/Receptionist"
                 className="block p-2 rounded hover:bg-gray-700"
               >
-                Home
+                Receptionist
               </Link>
             </li>
             <li>
               <Link
-                to="/profile"
+                to="/departmentstaff"
                 className="block p-2 rounded hover:bg-gray-700"
               >
-                Profile
+                Department Staff
               </Link>
             </li>
             <li>
               <Link
-                to="/settings"
+                to="/login"
                 className="block p-2 rounded hover:bg-gray-700"
               >
-                Settings
+                Admin Panel
               </Link>
             </li>
           </ul>
@@ -57,7 +58,7 @@ const Dashboard = () => {
 
       {/* Main Content */}
       <main className="flex-1 p-6 bg-gray-100">
-        <h1 className="text-4xl font-bold mb-4">Welcome to the Dashboard</h1>
+        <h1 className="text-4xl font-bold mb-4">Welcome to the Saylani Beneficiary App</h1>
         <p className="text-lg text-gray-600">
           This is the main content area. Customize it as needed for your app.
         </p>
@@ -65,21 +66,37 @@ const Dashboard = () => {
         {/* Example Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
           <div className="bg-white shadow-md p-4 rounded">
-            <h3 className="text-lg font-semibold mb-2">Feature 1</h3>
+            <h3 className="text-lg font-semibold mb-2">Feature 1 - Receptionist</h3>
             <p className="text-sm text-gray-500">
-              Description of the first feature or data point.
+              <ul>
+                <li>1. Registers beneficiaries, capturing CNIC, name, contact details, address, and
+                purpose.</li>
+                <li>2. Assigns tokens based on the purpose and department.
+                </li>
+                <li>3. Manages initial data entry and verification</li>
+              </ul>
             </p>
           </div>
           <div className="bg-white shadow-md p-4 rounded">
-            <h3 className="text-lg font-semibold mb-2">Feature 2</h3>
+            <h3 className="text-lg font-semibold mb-2">Feature 2 - Department Staff</h3>
             <p className="text-sm text-gray-500">
-              Description of the second feature or data point.
+              <ul>
+                <li>1. Scans tokens to retrieve detailed beneficiary information.</li>
+                <li>2. Updates assistance status (e.g., In Progress, Completed).
+                </li>
+                <li>3. Notes remarks or actions taken during assistance.</li>
+
+              </ul>
             </p>
           </div>
           <div className="bg-white shadow-md p-4 rounded">
-            <h3 className="text-lg font-semibold mb-2">Feature 3</h3>
+            <h3 className="text-lg font-semibold mb-2">Feature 3 - Admin Panel</h3>
             <p className="text-sm text-gray-500">
-              Description of the third feature or data point.
+              <ul>
+                <li>1. Full access to the system.</li>
+                {/* <li>2. Full access to the system.</li> */}
+
+              </ul>
             </p>
           </div>
         </div>
