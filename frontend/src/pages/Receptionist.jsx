@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { postData } from "../utils/axios";
 
 const Receptionist = () => {
-  const [showPassword, setShowPassword] = useState(false);
+  const [token, setToken] = useState(0);
 
   const {
     register,
@@ -13,7 +13,7 @@ const Receptionist = () => {
 
   const onSubmit = (data) => {
     const generateToken = () => Math.floor(100000 + Math.random() * 900000);
-
+    setToken(generateToken)
     console.log("Form Data: ", data);
     const { cnic, name, contact, address, purpose } = data;
     postData("receptionist/register", {
@@ -145,6 +145,8 @@ const Receptionist = () => {
             >
               Register
             </button>
+            <div>Your token no is <strong>{token}</strong></div><br />
+            <div>Copy token & go to department staff</div>
           </div>
         </form>
       </div>
